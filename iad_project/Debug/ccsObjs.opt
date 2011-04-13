@@ -1,0 +1,1 @@
+"./iadmain.obj" -l"libc.a" "../lnk_msp430g2231.cmd" 

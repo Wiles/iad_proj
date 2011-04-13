@@ -1,0 +1,23 @@
+#include <msp430x12x.h> 
+
+#define LED0 0x01
+#define LED1 0x04
+#define BUTTON BIT3
+
+int main(void)
+{
+	WDTCTL = WDTPW + WDTHOLD; // Stop watchdog timer
+	P1DIR |= BIT0 | BIT6; // Set P1.0 to output direction 
+	// P1.3 must stay at input
+	P1OUT ^= LED1;
+	for(;;)
+	{
+		volatile unsigned int i;
+		
+		P1OUT ^= LED1;
+		
+		i = 50000;
+		do(i--);
+		while( i != 0 );		
+	}
+}
