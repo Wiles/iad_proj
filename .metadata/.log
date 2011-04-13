@@ -1,0 +1,46 @@
+!SESSION 2011-04-13 12:06:34.615 -----------------------------------------------
+eclipse.buildId=4.2.3.00004
+java.version=1.5.0_14
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.ti.ccstudio.debug.core 4 0 2011-04-13 12:15:57.227
+!MESSAGE Error: MSP430: Error initializing emulator: No USB FET was found
+
+
+!ENTRY com.ti.ccstudio.debug.core 4 0 2011-04-13 12:16:10.409
+!MESSAGE Error: MSP430: Error initializing emulator: No USB FET was found
+
+
+!ENTRY com.ti.ccstudio.debug.core 4 0 2011-04-13 12:16:12.625
+!MESSAGE Error: MSP430: Error initializing emulator: No USB FET was found
+
+
+!ENTRY com.ti.ccstudio.debug.core 4 0 2011-04-13 12:16:16.602
+!MESSAGE Error: MSP430: Error initializing emulator: No USB FET was found
+
+!SESSION 2011-04-13 13:06:07.950 -----------------------------------------------
+eclipse.buildId=4.2.3.00004
+java.version=1.5.0_14
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:36.174
+!MESSAGE Invalid Menu Extension (Path is invalid): com.ti.ccstudio.managedbuild.ui.actions.UpgradeCodegenToolVersionAction
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:36.181
+!MESSAGE Invalid Menu Extension (Path is invalid): com.ti.common.project.ui.actions.ApplyProjectTemplateAction
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:36.215
+!MESSAGE Invalid Menu Extension (Path is invalid): org.eclipse.rtsc.xdctools.project.ui.actions.UpgradeRTSCProductVersionAction
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:45.189
+!MESSAGE Invalid Menu Extension (Path is invalid): com.ti.ccstudio.managedbuild.ui.actions.UpgradeCodegenToolVersionAction
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:45.193
+!MESSAGE Invalid Menu Extension (Path is invalid): com.ti.common.project.ui.actions.ApplyProjectTemplateAction
+
+!ENTRY org.eclipse.ui 4 4 2011-04-13 13:07:45.196
+!MESSAGE Invalid Menu Extension (Path is invalid): org.eclipse.rtsc.xdctools.project.ui.actions.UpgradeRTSCProductVersionAction
