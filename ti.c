@@ -7,12 +7,24 @@
 #define ONE_SECOND_TENTH 3276
 #define UPDATE_DELAY 100
 
+#define BUTTON_START 1_3
+#define BUTTON_STOP 1_6
+#defint BUTTON_RESET (BUTTON_START | BUTTON_STOP)
+
+//Globals
+unsigned long timer;
+
+int running = 0;
+int buttons = 0;
+
+unsigned long previousScreenUpdate = 0;
+unsigned long startTime = 0;
+unsigned long endTime = 0;
+
 void delay_ms(unsigned int ms)
 {
-
   unsigned int i;
   for (i = 0; i<= ms; i++)
-
   {
     __delay_cycles(500);
 
@@ -38,21 +50,52 @@ void main(void)
   // Turn off all outputs, including LED
   P1OUT &= 0x00;
 
-  // Enable P1.3 and P1.6 interrupt
-  // Don’t waste time interrupting on Pin 1.4
-  P1IE |= BIT3 | BIT6;
-  // Clear P1.3 and P1.6 IFG
-  P1IFG &= ~BIT3 | ~BIT6;
-
   // Enter low power mode, but keep interrupts on
-  _BIS_SR(CPUOFF + GIE);
+  _BIS_SR(GIE);
+  
+  //TODO start communication with serial device
+  //Write 'U' to serical port
 
   while(1)
   {
-
-    // Update the VGA display
-
-    delay_ms(UPDATE_DELAY);
+    buttons = pin;
+    if( buttons == BUTTON_START && running == 0 )
+    {
+      startTime = timer;
+      running = 1;
+    }
+    else if( buttons == BUTTON_END && running == 1 )
+    {
+      endTime = timer - startTime;
+      running = 2;
+    }
+    else if( buttons == BUTTON_RESTART && running == 2 ) 
+    {
+      running = 3;
+    }
+    else if( buttons == 0 && running = 3 )
+    {
+      running = 0;
+    }
+    
+    if( (timer - previousUpdateTime) > UPDATE_DELAY )
+    {
+      char command[] = {0x53,0x00,0x00,0x00,0x00,0x00,0x02,0xFF,0x00,0x00,0x30,0x30,0x3A,0x30,0x30,0x3A,0x30,0x30,0x2E,0x30,0x30,0x00};
+      //TODO make command string
+      if( running == 1 )
+      {
+        //TODO update command to show timer - startTime
+      }
+      else if( running == 2 )
+      {
+        //TODO update command to show endTime
+      }
+      //TODO disable interrupts
+      
+      //TODO update display
+      
+      //TODO enable interrupts
+    }
   }
 }
 
@@ -61,38 +104,5 @@ void main(void)
 __interrupt void Timer_A (void)
 {   
   // increment timer
-}
-
-// Port 1 interrupt service routine
-#pragma vector=PORT1_VECTOR
-__interrupt void Port_1(void)
-{
-  if (pin & 1_3 && pin & 1_6)
-  {
-    // reset timer
-
-  }
-
-  if (pin == 1_3)
-
-  {
-
-    P1DIR |= BIT0;
-
-    P1OUT &= BIT0;
-
-    // start the timer
-
-  }
-
-  else if (pin == 1_6)
-
-  {
-
-    P1DIR |= BIT0;
-
-    P1OUT &= 0x00;
-
-    // stop timer
-  }
+  ++timer;
 }
