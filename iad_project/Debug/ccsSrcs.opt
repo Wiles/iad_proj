@@ -1,1 +1,1 @@
-"../iadmain.c" 
+"../buttons.c" "../main.c" "../serial.c" "../time.c" 

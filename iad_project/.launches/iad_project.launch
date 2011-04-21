@@ -15,7 +15,7 @@
 <stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList/&gt;&#13;&#10;"/>
 <stringAttribute key="com.ti.ccstudio.debug.core.MRU_PROGRAM_NAME" value="D:\programming\CodeComposer\iad_project\Debug\iad_project.out"/>
 <stringAttribute key="CCEDebugOptions.CONNECTION_CONFIGURATION_FILE" value="common/targetdb/connections/TIMSP430-USB.xml"/>
-<stringAttribute key="com.ti.ccstudio.debug.core.MRU_MODULES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;modules&gt;&#13;&#10;&lt;module name=&quot;D:\programming\CodeComposer\iad_project\Debug\iad_project.out&quot; time=&quot;Wed Apr 13 12:36:45 EDT 2011&quot; time_long=&quot;1302712605613&quot;/&gt;&#13;&#10;&lt;/modules&gt;&#13;&#10;"/>
+<stringAttribute key="com.ti.ccstudio.debug.core.MRU_MODULES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;modules&gt;&#13;&#10;&lt;module name=&quot;D:\programming\CodeComposer\iad_project\Debug\iad_project.out&quot; time=&quot;Tue Apr 19 13:45:39 EDT 2011&quot; time_long=&quot;1303235139847&quot;/&gt;&#13;&#10;&lt;/modules&gt;&#13;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="iad_project"/>
 <stringAttribute key="CCEDebugOptions.CPU_NAME" value="TI MSP430 USB1/MSP430"/>
 <stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;globalVariableList/&gt;&#13;&#10;"/>

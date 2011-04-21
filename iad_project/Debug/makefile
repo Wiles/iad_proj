@@ -10,7 +10,10 @@ CG_TOOL_ROOT := C:/Program Files/Texas Instruments/ccsv4/tools/compiler/msp430
 
 ORDERED_OBJS += \
 $(GEN_CMDS_QUOTED) \
-"./iadmain.obj" \
+"./time.obj" \
+"./serial.obj" \
+"./main.obj" \
+"./buttons.obj" \
 -l"libc.a" \
 "../lnk_msp430g2231.cmd" \
 
@@ -118,8 +121,8 @@ iad_project.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(MSP430_EXECUTABLE_OUTPUTS__QTD) "iad_project.out"
-	-$(RM) ".\iadmain.obj" 
-	-$(RM) ".\iadmain.pp" 
+	-$(RM) ".\buttons.obj" ".\main.obj" ".\serial.obj" ".\time.obj" 
+	-$(RM) ".\buttons.pp" ".\main.pp" ".\serial.pp" ".\time.pp" 
 	-@echo ' '
 
 .PHONY: all clean dependents
