@@ -4,24 +4,42 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../iadmain.c 
+../buttons.c \
+../main.c \
+../serial.c \
+../time.c 
 
 CMD_SRCS += \
 ../lnk_msp430g2231.cmd 
 
 OBJS += \
-./iadmain.obj 
+./buttons.obj \
+./main.obj \
+./serial.obj \
+./time.obj 
 
 C_DEPS += \
-./iadmain.pp 
+./buttons.pp \
+./main.pp \
+./serial.pp \
+./time.pp 
 
 OBJS__QTD += \
-".\iadmain.obj" 
+".\buttons.obj" \
+".\main.obj" \
+".\serial.obj" \
+".\time.obj" 
 
 C_DEPS__QTD += \
-".\iadmain.pp" 
+".\buttons.pp" \
+".\main.pp" \
+".\serial.pp" \
+".\time.pp" 
 
 C_SRCS_QUOTED += \
-"../iadmain.c" 
+"../buttons.c" \
+"../main.c" \
+"../serial.c" \
+"../time.c" 
 
 
