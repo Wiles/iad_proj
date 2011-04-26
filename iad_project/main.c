@@ -16,13 +16,15 @@
 #define UPDATE_DELAY 73
 
 //Clock globals
+#define CMD_START_LENGTH 0
+#define CMD_END_LENGTH 1
+#define TIME_LENGTH 11
 const char timeMin[] = "00:00:00.00";
-char time[] = "00:00:00.00";
+char time[TIME_LENGTH + 1] = "00:00:00.00";
 const char timeMax[] = "99:59:59.99";
-char commandStart[] = "\r";
-char commandEnd[] = "";
+char commandStart[CMD_END_LENGTH + 1] = "\r";
+char commandEnd[CMD_START_LENGTH + 1] = "";
 unsigned long hundCounted = 0;
-unsigned long wdtCounter = 0;
 unsigned long runWDTTicks = 0;
 //------------------------------------------------------------------------------
 // Function prototypes
@@ -72,13 +74,12 @@ void main(void)
 			//Reinitilize timer to ensure syncing
 			TimerA_UART_init();
 			//Write Full command string
-        	TimerA_UART_print(commandStart);
-        	TimerA_UART_print(commandEnd);
-        	TimerA_UART_print(time);
+        	TimerA_UART_print_array(commandStart, CMD_START_LENGTH);
+        	TimerA_UART_print_array(time, TIME_LENGTH);
+        	TimerA_UART_print_array(commandEnd, CMD_END_LENGTH);
         	
         	//Turn buttons back on.
-        	enableButtons();
-        	
+        	enableButtons();        	
         }
     }
 }

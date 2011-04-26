@@ -55,6 +55,22 @@ void TimerA_UART_tx(unsigned char byte)
 }
 
 //------------------------------------------------------------------------------
+// Prints a char array over serial using the Timer_A UART. Used if you
+// need to transmit a message that includes 0s.
+//
+// array - char array to print
+// count - size of array in bytes
+//------------------------------------------------------------------------------
+void TimerA_UART_print_array(char *array, int count)
+{
+	int i = 0;
+	for( i = 0; i < count; ++i )
+	{
+        TimerA_UART_tx(array[i]);
+	}
+}
+
+//------------------------------------------------------------------------------
 // Prints a string over using the Timer_A UART
 //
 // string - null terminated string to write to serial

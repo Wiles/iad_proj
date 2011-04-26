@@ -11,6 +11,8 @@
 
 const unsigned long WDT_FREQUENCY = MCLK_FREQUENCY / WDT_DIVIDER;
 
+unsigned long wdtCounter = 0;
+
 /*
  * Sets up the watchdog timer and sets the clock speed
  */
