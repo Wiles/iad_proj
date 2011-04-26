@@ -59,5 +59,6 @@
 void TimerA_UART_init(void);
 void TimerA_UART_tx(unsigned char byte);
 void TimerA_UART_print(char *string);
+void TimerA_UART_print_array(char *array, int count);
 
 #endif /*SERIAL_H_*/
